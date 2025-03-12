@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>AI Resume Analyzer</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>Resume Analyzer</title>
 </head>
 <body>
-    <h1>AI-Powered Resume Analyzer</h1>
-    <form method="POST" enctype="multipart/form-data">
-        <label for="resume">Upload Resume (PDF/TXT):</label>
-        <input type="file" name="resume" accept=".txt,.pdf" required><br>
-        
-        <label for="job_description">Paste Job Description:</label><br>
-        <textarea name="job_description" rows="8" cols="80" required></textarea><br>
-        
+    <h2>Upload Resume and Job Description</h2>
+    <form method="post" enctype="multipart/form-data">
+        <label for="resume">Resume (PDF):</label>
+        <input type="file" name="resume" accept=".pdf" required><br><br>
+
+        <label for="job_description">Job Description:</label><br>
+        <textarea name="job_description" rows="5" cols="50"></textarea><br><br>
+
         <button type="submit">Analyze Resume</button>
     </form>
 </body>
