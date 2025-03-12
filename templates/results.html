@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Analysis Results</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>Resume Analysis Result</title>
 </head>
 <body>
-    <h1>Resume Analysis Report</h1>
-    <pre>{{ analysis }}</pre>
+    <h2>Resume Analysis Report</h2>
+
+    <p><strong>Skills Matched:</strong> {{ analysis.skills_matched }}</p>
+    <p><strong>Total Experience (Years):</strong> {{ analysis.total_experience }}</p>
+    <p><strong>Job Description:</strong> {{ analysis.job_description }}</p>
+
     <a href="/">Analyze Another Resume</a>
 </body>
 </html>
