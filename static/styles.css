@@ -1,26 +1,142 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+    background-color: #1e1e2f; /* Dark theme */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
 }
+
+/* ChatGPT Style Container */
+.container {
+    width: 90%;
+    max-width: 650px;
+    background: #2b2b3d;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
 h1 {
-    color: #2C3E50;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #30c48c;
 }
+
+/* Form */
 form {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
+/* Labels */
 label {
-    font-weight: bold;
+    font-weight: 600;
+    color: #bbbbbb;
+    font-size: 14px;
 }
-textarea {
+
+/* Input Fields */
+input, textarea {
     width: 100%;
-    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #33334a;
+    color: #fff;
+    transition: 0.3s;
 }
-button {
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
+
+input:focus, textarea:focus {
+    border-color: #30c48c;
+    outline: none;
+}
+
+/* Upload Button */
+input[type="file"] {
+    background: #33334a;
+    padding: 10px;
     cursor: pointer;
+}
+
+/* Submit Button */
+button {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #30c48c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #28a075;
+    transform: scale(1.05);
+}
+
+/* Chat Bubble Style for Results */
+.result-box {
+    width: 90%;
+    max-width: 650px;
+    background: #2b2b3d;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.result-box pre {
+    background: #33334a;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #ddd;
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+
+/* Chat Bubbles */
+.chat-bubble {
+    display: inline-block;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    background-color: #33334a;
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* User Input Bubble */
+.user-message {
+    background-color: #30c48c;
+    color: #fff;
+    align-self: flex-end;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container, .result-box {
+        width: 95%;
+        padding: 20px;
+    }
 }
